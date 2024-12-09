@@ -1,0 +1,14 @@
+@use '../utils/vars';
+
+.button {
+	background-color: vars.$main-color;
+	border-radius: 0.25rem;
+	border: 2px solid vars.$main-color;
+	color: vars.$white;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 1rem;
+	padding: 0.75rem 2rem;
+}

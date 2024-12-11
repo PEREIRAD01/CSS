@@ -8,7 +8,25 @@
 	cursor: pointer;
 	display: inline-block;
 	font-weight: 700;
-	text-decoration: none;
+	font-family: vars.$font-title;
 	font-size: 1rem;
 	padding: 0.75rem 2rem;
+	text-decoration: none;
+	transition: all 0.4s ease;
+
+	&:hover {
+		background-color: transparent;
+		color: vars.$main-color;
+	}
+
+	&--invert {
+		background-color: transparent;
+		border-color: vars.$secondary-color;
+		color: vars.$main-color;
+
+		&:hover {
+			background-color: vars.$secondary-color;
+			color: vars.$white;
+		}
+	}
 }

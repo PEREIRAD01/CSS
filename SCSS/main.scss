@@ -1,17 +1,17 @@
 // utils
 
-@use "./utils/reset";
-@use "./utils/fonts";
-@use "./utils/vars";
+@use './utils/reset';
+@use './utils/fonts';
+@use './utils/vars';
 
 // components
 
-@use "./components/buttons";
-@use "./components/container";
-@use "./components/section";
+@use './components/buttons';
+@use './components/container';
+@use './components/section';
 
 // modules
 
-@use "./modules/modules";
-@use "./modules/hero";
-
+@use './modules/modules';
+@use './modules/hero';
+@use './modules/site-header';

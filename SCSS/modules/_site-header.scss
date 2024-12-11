@@ -1,0 +1,59 @@
+@use '../utils/vars';
+
+%list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-header {
+	background-color: vars.$black;
+	padding: 2rem;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.button {
+		display: none;
+	}
+}
+
+.main-nav {
+	display: none;
+
+	&__list {
+		@extend %list-reset;
+		display: flex;
+		gap: 1.25rem;
+
+		a {
+			color: vars.$white;
+			font-weight: 700;
+			font-family: vars.$font-title;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@media screen and (width >= 700px) {
+	.site-header {
+		.button {
+			display: inline-block;
+		}
+	}
+}
+
+@media screen and (width >= 1200px) {
+	.main-nav {
+		display: block;
+	}
+
+	.site-header {
+		.hamburger-menu {
+			display: none;
+		}
+	}
+}

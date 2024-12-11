@@ -1,0 +1,43 @@
+@use '../utils/vars';
+
+.hero {
+	background: linear-gradient(to top right, rgba(0, 0, 0, 0.5), rgba(123, 41, 121, 0.45)), url(/assets/hero.png);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-position: center;
+	background-size: cover;
+	padding: 2rem;
+	min-height: 24.5rem;
+	justify-content: center;
+	color: vars.$white;
+	text-align: center;
+	gap: 2rem;
+
+	&__title {
+		font-family: vars.$font-title;
+		text-transform: uppercase;
+		margin: 0;
+		max-width: 53.75;
+	}
+
+	&__text {
+		max-width: 40.5rem;
+	}
+}
+@media screen and (width >= 700px) {
+	.hero {
+		min-height: 39rem;
+
+		&__title {
+			font-size: 3rem;
+		}
+
+		&__text {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@media screen and (width >= 1200px) {
+}

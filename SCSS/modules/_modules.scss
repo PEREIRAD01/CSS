@@ -1,0 +1,39 @@
+@use '../utils/vars';
+
+.modules {
+	padding: 0.5rem;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 2rem;
+	}
+
+	&__item {
+		text-align: center;
+		&:nth-child(n + 4):not(.modules__card) {
+			display: none;
+		}
+
+		&-header {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1.25rem;
+		}
+	}
+}
+
+@media screen and (width >= 620px) {
+	.modules {
+		&__item {
+			text-align: left;
+			&:nth-child(n + 4):not(.modules__card) {
+				display: block;
+			}
+            &-header {
+                justify-content: flex-start;
+		}
+		}
+	}
+}

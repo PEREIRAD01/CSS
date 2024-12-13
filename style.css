@@ -61,6 +61,18 @@ h6 {
 .modules {
   padding: 0.5rem;
 }
+.modules .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.modules__title {
+  font-family: "Poppins", sans-serif;
+  color: #0e1111;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
 .modules__wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

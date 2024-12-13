@@ -1,7 +1,21 @@
 @use '../utils/vars';
 
 .modules {
-	padding: 0.5rem;
+    padding: 0.5rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+
+    }
+    &__title {
+        font-family: vars.$font-title;
+        color: vars.$black;
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
 
 	&__wrapper {
 		display: grid;

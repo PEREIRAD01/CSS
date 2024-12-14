@@ -1,32 +1,67 @@
 @use '../utils/vars';
 
 .modules {
-    padding: 0.5rem;
+	padding: 0.5rem;
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
+	.container {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 3.75rem;
+		align-items: center;
+		gap: 2.2rem;
 
-    }
-    &__title {
-        font-family: vars.$font-title;
-        color: vars.$black;
-        text-transform: uppercase;
-        font-size: 3rem;
-    }
+		a.button {
+			display: none;
+		}
+	}
+	&__title {
+		font-family: vars.$font-title;
+		color: vars.$black;
+		font-size: 1, 63rem;
+		margin: 2rem, 0;
+	}
 
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 		gap: 2rem;
+		margin: 0 auto;
+	}
+
+	&__card {
+		background-color: vars.$contact-card-color;
+		padding: 1rem;
+
+		p {
+			margin: 0;
+			margin-bottom: 1rem;
+
+			&:nth-child(2) {
+				margin-bottom: 0;
+			}
+		}
+
+		&-contact {
+			text-decoration: none;
+			color: vars.$black;
+			font-weight: 700;
+		}
+
+		&-button {
+			display: none;
+		}
 	}
 
 	&__item {
 		text-align: center;
 		&:nth-child(n + 4):not(.modules__card) {
 			display: none;
+		}
+
+		&-title {
+			margin: 0;
 		}
 
 		&-header {
@@ -40,14 +75,41 @@
 
 @media screen and (width >= 620px) {
 	.modules {
+		.container {
+			a.button {
+				display: inline-block;
+			}
+		}
+		&__title {
+			font-size: 3rem;
+		}
+
 		&__item {
 			text-align: left;
 			&:nth-child(n + 4):not(.modules__card) {
 				display: block;
 			}
-            &-header {
-                justify-content: flex-start;
+			&-header {
+				justify-content: flex-start;
+			}
 		}
+		&__card {
+			text-align: center;
+
+			&-button {
+				display: inline-block;
+			}
+
+			p {
+				padding: 0.7rem;
+				&:nth-child(3) {
+					display: none;
+				}
+			}
+
+			&-contact {
+				display: none;
+			}
 		}
 	}
 }
